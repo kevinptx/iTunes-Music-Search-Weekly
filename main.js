@@ -26,15 +26,16 @@ theForm.addEventListener('submit', function(event){
       //handle the response
       for (var i = 0; i < json.results.length; i++) {
 
-        const songHTML = `
-          <div class="song">
-            <img id="image" src="${json.results[i].artworkUrl100}">
-            <h3>${json.results[i].artistName}</h3>
-            <h3>${json.results[i].trackName}</h3>
-            <h3>${json.results[i].collectionName}</h3>
-            <audio controls= "controls" src="${json.results[i].previewUrl}"></audio>
+        const itunesSongs = `
+          <div class="artistList">
+            <img class="image" value='${json.results[i].previewUrl}' src='${json.results[i].artworkUrl100}'>
+            <h3 class="artistName">${json.results[i].artistName}</h3>
+            <h4 class="collectionName">${json.results[i].collectionName}</h3>
+            <h3 class"trackName">${json.results[i].trackName}</h3>
+            <audio class="songPreview" controls= "controls" src="${json.results[i].previewUrl}"></audio>
+          </div>
         `
-resultContainer.insertAdjacentHTML("beforeEnd", songHTML)
+resultContainer.insertAdjacentHTML("beforeEnd", itunesSongs)
       }
     })
 })
