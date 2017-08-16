@@ -23,13 +23,12 @@ theForm.addEventListener('submit', function(event){
       return r.json()
     })
     .then(function(json){
-      console.log(json)
       //handle the response
       for (var i = 0; i < json.results.length; i++) {
 
         const songHTML = `
           <div class="song">
-            <img src="${json.results[i].artworkUrl100}">
+            <img id="image" src="${json.results[i].artworkUrl100}">
             <h3>${json.results[i].artistName}</h3>
             <h3>${json.results[i].trackName}</h3>
             <h3>${json.results[i].collectionName}</h3>
@@ -39,3 +38,17 @@ resultContainer.insertAdjacentHTML("beforeEnd", songHTML)
       }
     })
 })
+
+
+// Get the parent DIV, add click listener...
+document.querySelector(".search-results").addEventListener("click",function(e) {
+	// e.target was the clicked element
+  if (e.target && e.target.nodeName == "IMG") {
+    let audio = document.querySelector('.music-player')
+    audio.src = e.target.getAttribute('value')
+	}
+});
+
+
+
+// append value of image but first assign image a value but first decide whatever you want to click, so assign a value to the image and then append it to source of audio player
