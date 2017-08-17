@@ -1,33 +1,121 @@
-body {
-  background-color: #60d9f1;
+* {
+box-sizing: border-box;
+margin: 0 auto;
 }
 
-input {
+body {
+  border: 5px solid black;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #009900;
+}
 
+header{
+  border: 3px solid red;
+  padding: 2% 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+img {
+  border: 2px solid black;
+  width: 15em;
+  height: 15em;
+}
+
+.container {
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  width: 100%;
+}
+
+.search {
+  width: 100%;
+}
+
+#search-button{
+  height: 5em;
+  font-size: 2em;
+}
+
+
+input {
+  width: 25%;
+}
+
+ .search-form {
+  display: flex;
+  border: 5px solid orange;
+  padding: 30px;
+  justify-content: center;
+}
+
+div {
+  width: 50%;
+  height: 50%;
 }
 
 h1 {
+  padding: 20px;
   display: flex;
   justify-content: center;
+}
+
+h3 {
+  padding: 40px;
 }
 
 .player {
-  display: flex;
-  justify-content: center;
+  border: 3px solid green;
+  width: 70%;
 }
 
 .music-player {
-  display: flex;
-  flex-basis: 80%;
-  padding: 3%;
+  border: 3px dotted brown;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
 }
 
+label{
+  font-size: 2em;
+}
+
+#searchtext{
+  width: 25%;
+  font-size: 1.5em;
+}
+
+.artistList {
+  border: 3px dotted red;
+  padding: 20px;
+  width: 25%;
+  align-items: center;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 .search-results {
+  border: 3px dotted blue;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+
 }
 
 .itunesSongs {
+  border: 5px dotted black;
+}
 
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }

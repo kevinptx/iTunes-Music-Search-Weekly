@@ -9,6 +9,7 @@
 // 5. Create a way to listen for a click that will play the song in the audio play
 
 const theForm = document.querySelector("form.search-form")
+const audio = document.querySelector("music-player")
 theForm.addEventListener('submit', function(event){
   event.preventDefault()
 
@@ -31,8 +32,7 @@ theForm.addEventListener('submit', function(event){
             <img class="image" value='${json.results[i].previewUrl}' src='${json.results[i].artworkUrl100}'>
             <h3 class="artistName">${json.results[i].artistName}</h3>
             <h4 class="collectionName">${json.results[i].collectionName}</h3>
-            <h3 class"trackName">${json.results[i].trackName}</h3>
-            <audio class="songPreview" controls= "controls" src="${json.results[i].previewUrl}"></audio>
+            <h4 class"trackName">${json.results[i].trackName}</h4>
           </div>
         `
 resultContainer.insertAdjacentHTML("beforeEnd", itunesSongs)
@@ -42,7 +42,7 @@ resultContainer.insertAdjacentHTML("beforeEnd", itunesSongs)
 
 
 // Get the parent DIV, add click listener...
-document.querySelector(".search-results").addEventListener("click",function(e) {
+document.querySelector(".search-results").addEventListener("click", function(e) {
 	// e.target was the clicked element
   if (e.target && e.target.nodeName == "IMG") {
     let audio = document.querySelector('.music-player')
