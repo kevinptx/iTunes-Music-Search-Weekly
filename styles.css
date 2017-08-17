@@ -23,6 +23,7 @@ img {
   border: 2px solid black;
   width: 15em;
   height: 15em;
+  margin: 5px;
 }
 
 .container {
@@ -36,12 +37,13 @@ img {
 .search {
   width: 100%;
 }
-
+#results{
+  padding: 25px;
+}
 #search-button{
   height: 5em;
   font-size: 2em;
 }
-
 
 input {
   width: 25%;
@@ -60,14 +62,11 @@ div {
 }
 
 h1 {
-  padding: 20px;
   display: flex;
   justify-content: center;
 }
 
-h3 {
-  padding: 40px;
-}
+
 
 .player {
   border: 3px solid green;
@@ -92,14 +91,16 @@ label{
 
 .artistList {
   border: 3px dotted red;
-  padding: 20px;
+  padding: 5px;
   width: 25%;
   align-items: center;
   display: flex;
   align-content: center;
   flex-wrap: wrap;
   flex-direction: column;
+  text-align: center;
 }
+
 .search-results {
   border: 3px dotted blue;
   display: flex;
@@ -107,8 +108,17 @@ label{
   justify-content: space-between;
   width: 100%;
   padding: 20px;
-
 }
+h3 {
+  margin: 5px;
+  padding: 5px;
+}
+
+ h4{
+   margin: 5px;
+   padding: 5px;
+ }
+
 
 .itunesSongs {
   border: 5px dotted black;
