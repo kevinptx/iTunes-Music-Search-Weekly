@@ -38,15 +38,13 @@ img {
 }
 #search-button{
   font-size: 2em;
+  margin-left: 10px;
 }
 
-input {
-  width: 25%;
-}
 
  .search-form {
   display: flex;
-  padding-left: 20%;
+  padding-left: 30%;
   align-items: center;
 
 }
@@ -62,7 +60,7 @@ h1 {
 }
 
 .player {
-  width: 70%;
+  width: 60%;
 }
 
 .music-player {
@@ -72,11 +70,13 @@ h1 {
 }
 
 label{
-  font-size: 2em;
+  font-size: 1.5em;
+  margin-right: 5px;
+  font-weight: bold;
 }
 
 #searchtext{
-  width: 25%;
+  width: 30%;
   font-size: 1.5em;
 }
 
